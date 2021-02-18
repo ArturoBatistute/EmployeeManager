@@ -17,7 +17,6 @@ public class EmployeeService {
 
     public Employee addEmployee(Employee employee){
         employee.setEmployeeCode(UUID.randomUUID().toString());
-        employee.setName("Joseph");
 
         return employeeRepository.save(employee);
     }
@@ -39,9 +38,8 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
-    public String deleteEmployee(Long id){
-        employeeRepository.deleteEmployeeById(id);
+    public void deleteEmployee(Long id){
 
-        return "Employee Deleted!";
+        employeeRepository.deleteById(id);
     }
 }

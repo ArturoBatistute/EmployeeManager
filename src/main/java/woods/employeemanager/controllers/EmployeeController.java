@@ -8,6 +8,7 @@ import woods.employeemanager.entities.Employee;
 import woods.employeemanager.services.EmployeeService;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/employee")
@@ -45,7 +46,7 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteEmployeeById(@PathVariable("id") Long id){
+    public ResponseEntity deleteEmployeeById(@PathVariable("id") Long id){
         employeeService.deleteEmployee(id);
 
         return ResponseEntity.ok("Employee Deleted!");
