@@ -6,9 +6,7 @@ import woods.employeemanager.entities.Employee;
 import woods.employeemanager.exceptions.UserNotFoundException;
 import woods.employeemanager.repositories.EmployeeRepository;
 
-import javax.print.DocFlavor;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
